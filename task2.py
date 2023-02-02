@@ -1,12 +1,12 @@
-def GetTimeInSecondsFromUser():
-    userInput = input("Enter time in seconds: ")
-    while not userInput.isnumeric():
-        print("Wrong number!")
-        userInput = input("Enter time in seconds: ")
-    userInput = int(userInput)
-    result = "Time in h:m:s format: {} : {} : {}".format(userInput/3600, userInput/60, userInput)
-    return result
+def get_input_from_user(message):
+    user_input = input(message)
+    while not user_input.isnumeric():
+        print(f"Wrong number!")
+        user_input = input(message)
+    user_input = int(user_input)
+    return user_input
 
-print(GetTimeInSecondsFromUser())
+time_in_seconds = get_input_from_user("Enter time in seconds: ")
+print(f"Time in h:m:s format: {time_in_seconds/3600} : {time_in_seconds/60} : {time_in_seconds}")
 
 
